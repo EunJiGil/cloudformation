@@ -28,7 +28,11 @@ jobs:
 
 
       # Runs a single command using the runners shell
-      - name: securityrun
+      - name: securityrun1
+        run: ruby --version
+      - name: securityrun2
+        run: gem install cfn-nag
+      - name: securityrun3
         run: cfn_nag_scan --input-path DevSecOps.yml
 
 
